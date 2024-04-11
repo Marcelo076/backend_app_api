@@ -15,8 +15,14 @@ Este é um projeto de API configurado com Docker para facilitar o desenvolviment
     git clone <URL_do_repositório>
     cd <nome_do_repositório>
     ```
+2. **Arquivo .env**:
+    - remova o 'EXEMPLE' do arquivo .env na raiz do projeto
 
-2. **Inicie os contêineres Docker**:
+    ```bash
+   .env.EXEMPLE
+    ```
+
+3. **Inicie os contêineres Docker**:
     - Você pode usar o Docker Compose para iniciar o projeto. Execute o comando a partir do diretório raiz do projeto:
 
     ```bash
@@ -25,7 +31,7 @@ Este é um projeto de API configurado com Docker para facilitar o desenvolviment
 
     - Isso construirá e iniciará os contêineres com a API.
 
-3. **Realize a migração no banco de dados**:
+4. **Realize a migração no banco de dados**:
     - Após iniciar os contêineres, entre na máquina do contêiner PHP para realizar a migração no banco de dados. Use o comando abaixo para acessar o contêiner PHP:
 
     ```bash
@@ -40,17 +46,17 @@ Este é um projeto de API configurado com Docker para facilitar o desenvolviment
 
     - Este comando aplicará todas as migrações necessárias ao banco de dados para configurar o esquema correto.
 
-4. **Saia do contêiner PHP**:
+5. **Saia do contêiner PHP**:
     - Quando a migração estiver concluída, você pode sair do contêiner PHP digitando `exit`.
 
-5. **Acesse a API**:
+6. **Acesse a API**:
     - Após realizar a migração e garantir que os contêineres estejam em execução, você poderá acessar a API em seu navegador ou por meio de ferramentas de teste de API no seguinte endereço:
 
     ```plaintext
     http://localhost:<porta_da_API>/
     ```
 
-6. **Parar os contêineres**:
+7. **Parar os contêineres**:
     - Para parar os contêineres, execute o comando:
 
     ```bash
