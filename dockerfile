@@ -15,6 +15,9 @@ RUN apt-get update && apt-get install -y \
 # Instalar extensões do PHP necessárias
 RUN docker-php-ext-install zip
 
+# Instalar extensões do PDO necessárias
+RUN docker-php-ext-install pdo pdo_mysql
+
 # Instalar o Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
